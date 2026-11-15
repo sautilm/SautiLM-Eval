@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets & credentials (NEVER COMMIT)
+.env
+*.key
+kaggle.json
+
+# Raw full dictionaries & private training corpora (NEVER COMMIT)
+*full_lexicon*.json
+*train*.jsonl
+*.litertlm
+*.tflite
+*.safetensors
+*.bin

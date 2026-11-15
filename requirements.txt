@@ -1,0 +1,3 @@
+# SautiLM-Eval dependencies (pure Python 3.10+ stdlib supported out of the box)
+huggingface_hub>=0.26.0
+python-dotenv>=1.0.1
