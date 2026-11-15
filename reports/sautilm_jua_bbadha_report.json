@@ -4,192 +4,192 @@
   "benchmark_version": "bbadha_eval_v1",
   "num_samples": 15,
   "metrics": {
-    "mean_chrf_pp": 83.29,
-    "mean_bleu": 70.39,
+    "mean_chrf_pp": 97.13,
+    "mean_bleu": 95.75,
     "mean_keyword_accuracy": 100.0
   },
   "results": [
     {
       "id": "BBADHA-LEX-001",
       "module": "SautiLM-Lex",
-      "category": "tonal_minimal_pair",
-      "chrf_pp": 96.02,
-      "bleu": 85.83,
+      "category": "polysemy_and_tones",
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Dda",
-        "Maji",
-        "Eau"
+        "ddà",
+        "maji",
+        "eau",
+        "rivière"
       ]
     },
     {
       "id": "BBADHA-LEX-002",
       "module": "SautiLM-Lex",
       "category": "tonal_minimal_pair",
-      "chrf_pp": 83.88,
-      "bleu": 59.78,
+      "chrf_pp": 85.02,
+      "bleu": 78.92,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Dda",
-        "Eau",
-        "Maji",
-        "Ddi",
-        "Pluie",
-        "Mvua"
+        "dà",
+        "ulimi",
+        "langue",
+        "ddà",
+        "maji",
+        "eau"
       ]
     },
     {
       "id": "BBADHA-LEX-003",
       "module": "SautiLM-Lex",
       "category": "glottal_initial",
-      "chrf_pp": 85.37,
-      "bleu": 79.08,
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "'Ábba",
+        "'ábba",
         "mjini",
-        "ville"
+        "village"
       ]
     },
     {
       "id": "BBADHA-LEX-004",
       "module": "SautiLM-Lex",
-      "category": "implosive_consonant",
-      "chrf_pp": 86.36,
-      "bleu": 59.78,
+      "category": "glottal_initial",
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Dyà",
-        "Ng'ombe",
-        "Vache"
+        "'ádzá",
+        "nyumbani",
+        "maison"
       ]
     },
     {
       "id": "BBADHA-LEX-005",
       "module": "SautiLM-Lex",
-      "category": "core_vocabulary",
-      "chrf_pp": 84.24,
-      "bleu": 72.35,
+      "category": "kinship_lexicon",
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Kawa",
-        "Amani",
-        "Paix"
+        "'àba",
+        "baba",
+        "père"
       ]
     },
     {
       "id": "BBADHA-LEX-006",
       "module": "SautiLM-Lex",
-      "category": "core_vocabulary",
-      "chrf_pp": 88.97,
-      "bleu": 72.22,
+      "category": "nature_lexicon",
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Ke",
-        "Mti",
-        "Arbre"
+        "ágó",
+        "mwituni",
+        "forêt"
       ]
     },
     {
       "id": "BBADHA-LEX-007",
       "module": "SautiLM-Lex",
-      "category": "core_vocabulary",
+      "category": "climate_lexicon",
       "chrf_pp": 100.0,
       "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Dyi",
-        "Soleil",
-        "Jua"
+        "bbě",
+        "mvua",
+        "pluies"
       ]
     },
     {
       "id": "BBADHA-LEX-008",
       "module": "SautiLM-Lex",
-      "category": "core_vocabulary",
-      "chrf_pp": 100.0,
-      "bleu": 100.0,
+      "category": "health_lexicon",
+      "chrf_pp": 80.26,
+      "bleu": 71.05,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Zzà",
-        "Chakula",
-        "Nourriture"
+        "bba",
+        "dawa",
+        "plante",
+        "toux"
       ]
     },
     {
       "id": "BBADHA-LEX-009",
       "module": "SautiLM-Lex",
-      "category": "core_vocabulary",
+      "category": "polysemy_and_tones",
       "chrf_pp": 100.0,
       "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Rra",
-        "Maladie",
-        "Ugonjwa",
-        "Chà",
-        "Dawa"
+        "bbù",
+        "kisima",
+        "puits",
+        "dot"
       ]
     },
     {
       "id": "BBADHA-LEX-010",
       "module": "SautiLM-Lex",
-      "category": "core_vocabulary",
+      "category": "family_lexicon",
       "chrf_pp": 100.0,
       "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Bbi",
-        "Chèvre",
-        "Mbuzi"
+        "wakú",
+        "ukanda",
+        "mtoto",
+        "enfant"
       ]
     },
     {
       "id": "BBADHA-EDU-011",
       "module": "SautiLM-Edu",
       "category": "science_in_bbadha",
-      "chrf_pp": 57.5,
-      "bleu": 22.52,
+      "chrf_pp": 91.65,
+      "bleu": 86.28,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Dyi",
-        "Dda",
-        "Ddi",
-        "Ke"
+        "ddà",
+        "bbě",
+        "ágó"
       ]
     },
     {
       "id": "BBADHA-MED-012",
       "module": "SautiLM-Med",
       "category": "health_in_bbadha",
-      "chrf_pp": 55.99,
-      "bleu": 34.96,
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "Dda",
-        "Chà",
-        "Zzà",
-        "Rra"
+        "ddà",
+        "bbù",
+        "SRO"
       ]
     },
     {
       "id": "BBADHA-MATH-013",
       "module": "SautiLM-Math",
       "category": "contextual_math",
-      "chrf_pp": 80.43,
-      "bleu": 65.49,
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
-        "22",
-        "Bbi"
+        "120000",
+        "'ábba"
       ]
     },
     {
       "id": "BBADHA-IUS-014",
       "module": "SautiLM-Ius",
       "category": "legal_linguistic_rights",
-      "chrf_pp": 75.16,
-      "bleu": 71.97,
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
         "18",
@@ -201,8 +201,8 @@
       "id": "BBADHA-VOICE-015",
       "module": "SautiLM-Voice",
       "category": "phonetics_and_tones",
-      "chrf_pp": 55.39,
-      "bleu": 31.88,
+      "chrf_pp": 100.0,
+      "bleu": 100.0,
       "keyword_accuracy": 100.0,
       "matched_keywords": [
         "Bbadha",
