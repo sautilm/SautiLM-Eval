@@ -20,11 +20,15 @@ This benchmark currently focuses on **Bbadha (Kilendu - ISO 639-3: `led`)**, eva
 
 ---
 
-## 2. Baseline Results : `SautiLM Jua` (`92.48 MB` LiteRT-LM INT4)
+## 2. Empirical Results: `SautiLM Jua` (`272.36 MB` LiteRT-LM INT8)
 
-| Model | Language | Benchmark | Bbadha Keyword Accuracy | Mean `chrF++` | Mean `BLEU-4` |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **`SautiLM Jua` (`92.48 MB`)** | Bbadha (`led`) | `bbadha_eval_v1` | **100.0%** | **84.42 / 100** | **67.85 / 100** |
+Measured directly via `litert_lm.Engine` (`litert_lm==0.19.2`) on `benchmarks/bbadha_eval_v1.jsonl` (`n=15` real Bbadha prompts):
+
+| Configuration | Backend | Language | Bbadha Keyword Accuracy | Mean `chrF++` | Mean `BLEU-4` | Mean Latency |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Parametric Weights Only (`Zero-RAG`) | CPU (XNNPACK) | Bbadha (`led`) | **38.89%** | **24.69 / 100** | **4.81 / 100** | `4,235.0 ms` |
+| **Hybrid Edge-AI** (Weights + Bbadha RAG + MathSolver) | CPU (XNNPACK) | Bbadha (`led`) | **68.33%** | **34.15 / 100** | **9.58 / 100** | `4,267.2 ms` |
+| **Hybrid Edge-AI** (Weights + Bbadha RAG + MathSolver) | GPU (WebGPU) | Bbadha (`led`) | **68.33%** | **31.40 / 100** | **7.32 / 100** | **`2,841.4 ms`** |
 
 Full machine-readable and human-readable reports are generated in:
 - [`reports/sautilm_jua_bbadha_report.json`](reports/sautilm_jua_bbadha_report.json)
@@ -35,8 +39,8 @@ Full machine-readable and human-readable reports are generated in:
 ## 3. Quick Start
 
 ```bash
-# 1. Run the Bbadha evaluation suite and regenerate reports
-python -m src.evaluator
+# 1. Run live evaluation against the real .litertlm container
+python -m src.evaluator --model ../SautiLM-Forge/kaggle_output/sautilm-jua.litertlm --lexicon ../SautiLM-Forge/data/bbadha_full_lexicon.json
 
 # 2. Run unit tests
 python -m unittest discover -s tests -v

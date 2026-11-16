@@ -1,8 +1,8 @@
 import unittest
 from src.evaluator import (
     build_benchmark_file,
+    build_rag_system_prompt,
     evaluate_predictions,
-    generate_baseline_report,
     get_bbadha_benchmark_items,
 )
 from src.metrics import (
@@ -31,15 +31,44 @@ class TestSautiLMEvalBbadha(unittest.TestCase):
         self.assertEqual(score, 100.0)
         self.assertEqual(len(matched), 3)
 
-    def test_benchmark_and_report_generation(self):
+    def test_benchmark_and_evaluator_contract(self):
         items = get_bbadha_benchmark_items()
         self.assertEqual(len(items), 15)
         b_path = build_benchmark_file()
         self.assertTrue(b_path.exists())
 
-        report = generate_baseline_report()
+        sample_preds = {item["id"]: item["reference"] for item in items}
+        report = evaluate_predictions(sample_preds, model_name="Reference Self-Check")
         self.assertEqual(report["metrics"]["mean_keyword_accuracy"], 100.0)
-        self.assertGreater(report["metrics"]["mean_chrf_pp"], 70.0)
+        self.assertEqual(report["metrics"]["mean_chrf_pp"], 100.0)
+
+    def test_build_rag_system_prompt_injects_dictionary_and_math(self):
+        mock_entries = [
+            {
+                "key": "ddà_221",
+                "bbadha": "ddà",
+                "grammar": "n.",
+                "swahili": "maji, kuwa refu",
+                "french": "l'eau, la rivière",
+                "examples": [],
+            }
+        ]
+        rag_prompt = build_rag_system_prompt(
+            'Que signifie le mot Bbadha "ddà" ?',
+            "SautiLM-Lex",
+            lexicon_entries=mock_entries,
+        )
+        self.assertIsNotNone(rag_prompt)
+        self.assertIn("DICTIONNAIRE BBADHA VERIFIE", rag_prompt)
+        self.assertIn("maji", rag_prompt)
+
+        math_prompt = build_rag_system_prompt(
+            "Dans une coopérative, 20 membres ont 3 parts à 2000 FC.",
+            "SautiLM-Math",
+            lexicon_entries=[],
+        )
+        self.assertIsNotNone(math_prompt)
+        self.assertIn("120000", math_prompt)
 
 
 if __name__ == "__main__":
