@@ -12,7 +12,7 @@ from collections import Counter
 import math
 import re
 import unicodedata
-from typing import Dict, List, Sequence, Tuple
+from typing import Any, Dict, List, Sequence, Tuple
 
 
 def normalize_bbadha(text: str, strip_tones: bool = False) -> str:
@@ -151,3 +151,59 @@ def evaluate_target_keywords(
 
     score = round((len(matched) / len(expected_keywords)) * 100.0, 2)
     return score, matched
+
+
+def _pattern_matches(response: str, norm_response: str, pattern: str) -> bool:
+    """Matches regex patterns cleanly against both surface and Bbadha-normalized text."""
+    try:
+        rx = re.compile(pattern, re.IGNORECASE | re.UNICODE)
+    except re.error:
+        pat_lc = pattern.lower()
+        return pat_lc in response.lower() or pat_lc in norm_response.lower()
+    return bool(rx.search(response) or rx.search(norm_response))
+
+
+def evaluate_semantic_accuracy(
+    response: str,
+    semantic_checks: Sequence[Dict[str, Any]] = (),
+    forbidden_patterns: Sequence[str] = (),
+) -> Tuple[float, Dict[str, Any]]:
+    """
+    Scores semantic truthfulness beyond surface keyword overlap by verifying required
+    concept assertions and zeroing score on fatal hallucinations/wrong calculations.
+    """
+    collapsed = re.sub(r"\s+", " ", response or "").strip()
+    norm_exact = normalize_bbadha(collapsed, strip_tones=False)
+
+    forbidden_hits: List[str] = []
+    for pat in forbidden_patterns:
+        if _pattern_matches(collapsed, norm_exact, pat):
+            forbidden_hits.append(pat)
+
+    passed_checks: List[str] = []
+    failed_checks: List[str] = []
+    for idx, chk in enumerate(semantic_checks):
+        name = str(chk.get("name") or f"check_{idx}")
+        any_of = chk.get("any_of") or ()
+        all_of = chk.get("all_of") or ()
+
+        ok_any = True if not any_of else any(_pattern_matches(collapsed, norm_exact, p) for p in any_of)
+        ok_all = True if not all_of else all(_pattern_matches(collapsed, norm_exact, p) for p in all_of)
+        if ok_any and ok_all:
+            passed_checks.append(name)
+        else:
+            failed_checks.append(name)
+
+    if forbidden_hits:
+        score = 0.0
+    elif not semantic_checks:
+        score = 100.0
+    else:
+        score = round((len(passed_checks) / len(semantic_checks)) * 100.0, 2)
+
+    return score, {
+        "semantic_pass": not forbidden_hits and len(failed_checks) == 0,
+        "passed_checks": passed_checks,
+        "failed_checks": failed_checks,
+        "forbidden_hits": forbidden_hits,
+    }

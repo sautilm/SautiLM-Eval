@@ -20,19 +20,25 @@ This benchmark currently focuses on **Bbadha (Kilendu - ISO 639-3: `led`)**, eva
 
 ---
 
-## 2. Empirical Results: `SautiLM Jua` (`272.36 MB` LiteRT-LM INT8)
+## 2. Empirical Results: Zero-Leakage v5 Suite (`litert_lm.Engine` CPU XNNPACK)
 
-Measured directly via `litert_lm.Engine` (`litert_lm==0.19.2`) on `benchmarks/bbadha_eval_v1.jsonl` (`n=15` real Bbadha prompts):
+### 2.1. `bbadha_eval_v1` (`SautiLM-Jua`, `283.48 MB` LiteRT-LM INT8, `n=15` real Bbadha prompts)
 
-| Configuration | Backend | Language | Bbadha Keyword Accuracy | Mean `chrF++` | Mean `BLEU-4` | Mean Latency |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Parametric Weights Only (`Zero-RAG`) | CPU (XNNPACK) | Bbadha (`led`) | **38.89%** | **24.69 / 100** | **4.81 / 100** | `4,235.0 ms` |
-| **Hybrid Edge-AI** (Weights + Bbadha RAG + MathSolver) | CPU (XNNPACK) | Bbadha (`led`) | **68.33%** | **34.15 / 100** | **9.58 / 100** | `4,267.2 ms` |
-| **Hybrid Edge-AI** (Weights + Bbadha RAG + MathSolver) | GPU (WebGPU) | Bbadha (`led`) | **68.33%** | **31.40 / 100** | **7.32 / 100** | **`2,841.4 ms`** |
+| Configuration | Backend | Language | Bbadha Keyword Accuracy | Semantic Accuracy | Mean `chrF++` | Mean `BLEU-4` | Mean Latency |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Parametric Weights Only (`Zero-RAG`) | CPU (XNNPACK) | Bbadha (`led`) | **31.67%** | **70.00%** | **20.85 / 100** | **4.91 / 100** | `1,913.2 ms` |
+| **Hybrid Edge-AI** (Weights + Bbadha RAG + MathSolver) | CPU (XNNPACK) | Bbadha (`led`) | **58.89%** | **76.67%** | **27.60 / 100** | **9.06 / 100** | `2,602.1 ms` |
+
+### 2.2. `domain_eval_v2` Multi-Tier Held-Out & Epistemic Abstention Suite (`n=7` across `Lex`, `Ius`, `Med`, `Agri`, `Kuu-STEM`)
+
+| Suite | Models Evaluated (`litert_lm.Engine` + `sautilm_sdk` Guardrails) | Mean Keyword Accuracy | Mean Semantic Accuracy |
+| :--- | :--- | :--- | :--- |
+| `domain_eval_v2` | `SautiLM-Jua-Lex`, `SautiLM-Jua-Ius`, `SautiLM-Jua-Med`, `SautiLM-Jua-Agri`, `SautiLM-Kuu-STEM` (`1B`) | **92.86%** | **100.00% (`7/7`)** |
 
 Full machine-readable and human-readable reports are generated in:
 - [`reports/sautilm_jua_bbadha_report.json`](reports/sautilm_jua_bbadha_report.json)
 - [`reports/sautilm_jua_bbadha_report.md`](reports/sautilm_jua_bbadha_report.md)
+- [`reports/sautilm_domain_eval_v2_report.json`](reports/sautilm_domain_eval_v2_report.json)
 
 ---
 

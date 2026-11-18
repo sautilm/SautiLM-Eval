@@ -1,517 +1,397 @@
 {
   "benchmark_version": "bbadha_eval_v1",
   "model_file": "sautilm-jua.litertlm",
-  "model_size_bytes": 285589504,
-  "model_size_mb": 272.36,
+  "model_size_bytes": 297254912,
+  "model_size_mb": 283.48,
   "raw_cpu": {
-    "model_name": "SautiLM Jua (272.36 MB INT8, CPU, Raw Parametric Weights)",
+    "model_name": "SautiLM Jua (283.48 MB INT8, CPU, Raw Parametric Weights)",
     "language": "Bbadha (Kilendu - ISO 639-3: led)",
     "benchmark_version": "bbadha_eval_v1",
     "num_samples": 15,
     "metrics": {
-      "mean_chrf_pp": 24.69,
-      "mean_bleu": 4.81,
-      "mean_keyword_accuracy": 38.89,
-      "mean_latency_ms": 4235.0,
-      "total_eval_seconds": 63.53
+      "mean_chrf_pp": 20.85,
+      "mean_bleu": 4.91,
+      "mean_keyword_accuracy": 31.67,
+      "mean_semantic_accuracy": 70.0,
+      "mean_latency_ms": 1913.2,
+      "total_eval_seconds": 28.7
     },
     "results": [
       {
         "id": "BBADHA-LEX-001",
         "module": "SautiLM-Lex",
         "category": "polysemy_and_tones",
-        "chrf_pp": 17.38,
-        "bleu": 2.85,
+        "chrf_pp": 16.62,
+        "bleu": 3.51,
         "keyword_accuracy": 25.0,
         "matched_keywords": [
           "ddà"
         ],
-        "response_chars": 479,
-        "response_preview": "### Fiche Lexicale et Droit des Professions (SautiLM-Lex)\n\n- **Langue** : Bbadha (Kilendu - Ituri, Est de la RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : - | **Kiswahili** : kpakpa, -kpa\n - *Bbadha* : \"ddà-kpa\" -> FR: \"Le chien est parti à la chasse\" | S",
-        "latency_ms": 5298.9
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 162,
+        "response_preview": "### Ordre Phonétique et Semnce SautiLM-Jua-Lex\n\n- **Kiswahili** : Bbadha -> **ddà** (twa-twa-ddà)\n- **Français** : Un de ces mots signifie : **ddà** (twa-twa-ddà)",
+        "latency_ms": 1204.2
       },
       {
         "id": "BBADHA-LEX-002",
         "module": "SautiLM-Lex",
         "category": "tonal_minimal_pair",
-        "chrf_pp": 15.2,
-        "bleu": 1.46,
+        "chrf_pp": 21.52,
+        "bleu": 6.16,
         "keyword_accuracy": 33.33,
         "matched_keywords": [
           "dà",
           "ddà"
         ],
-        "response_chars": 643,
-        "response_preview": "### Droit Civil Congolais : D'Ato et D'Urunda\n\n**Référence légale :** **Articles 17, 18 et 19 de la Convention relative à la Droite (Ius Naturalis Administrativi)**.\n\n1. **Mot de guerre et portée de l'action :**\n - Les termes \"dà\" et \"ddà\" (au sens figuré ou lexical) caractérisés une **mot de guerre** ou non caractéris",
-        "latency_ms": 5913.0
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "da_meaning",
+            "dda_meaning"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 200,
+        "response_preview": "### Qu'est-ce que l'un et l'autre ? (**SautiLM-Jua-STEM**)\n\n1. **Bbadha (Kilendu)** : **ddà** (SautiLM-Jua-STEM)\n2. **Kiswahili** : **dà** (SautiLM-Jua-STEM)\n3. **Angola** : **ddà** (SautiLM-Jua-STEM)",
+        "latency_ms": 1565.2
       },
       {
         "id": "BBADHA-LEX-003",
         "module": "SautiLM-Lex",
         "category": "glottal_initial",
-        "chrf_pp": 22.4,
-        "bleu": 3.27,
-        "keyword_accuracy": 33.33,
-        "matched_keywords": [
-          "'ábba"
-        ],
-        "response_chars": 467,
-        "response_preview": "### Fiche Lexicale SautiLM-Lex : **'ábba**\n\n- **Langue** : Bbadha (Kilendu - Ituri, Est de la RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Kiswahili** : 'ábba | **Français** : -\n - *Bbadha* : \"'ábba\" -> FR: \"C'est moi qui ai dit cela\" | SW: \"Ni mimi nilianguka\"\n - *B",
-        "latency_ms": 4764.2
+        "chrf_pp": 15.36,
+        "bleu": 1.33,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 117,
+        "response_preview": "### Terme Spécifié :\n\n- **Kiswahili** : **bbadha** (langue + code + nom)\n- **Français** : **à** (langue + code + nom)",
+        "latency_ms": 779.3
       },
       {
         "id": "BBADHA-LEX-004",
         "module": "SautiLM-Lex",
         "category": "glottal_initial",
-        "chrf_pp": 24.34,
-        "bleu": 6.12,
+        "chrf_pp": 18.72,
+        "bleu": 3.06,
         "keyword_accuracy": 33.33,
         "matched_keywords": [
           "'ádzá"
         ],
-        "response_chars": 133,
-        "response_preview": "En **Kiswahili** (Bbadha : **'ádzá**) :\n\n- **Mot Bbadha** : 'ádzá\n- **L'Évaporation** : La chaleur (ýûni)\n- **Français** : La chaleur",
-        "latency_ms": 1662.2
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 122,
+        "response_preview": "### Terme Bbadha Synonyme (**ádzá**)\n\n- **Kiswahili** : **Bbadha** (langue)\n- **Français** : **SautiLM-Jua-STEM** (langue)",
+        "latency_ms": 875.0
       },
       {
         "id": "BBADHA-LEX-005",
         "module": "SautiLM-Lex",
         "category": "kinship_lexicon",
-        "chrf_pp": 21.45,
-        "bleu": 3.0,
+        "chrf_pp": 12.97,
+        "bleu": 2.66,
         "keyword_accuracy": 33.33,
         "matched_keywords": [
           "'àba"
         ],
-        "response_chars": 459,
-        "response_preview": "### Fiche Lexicale SautiLM-Lex : **'àba**\n\n- **Langue** : Bbadha (Kilendu - Ituri, Est de la RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : à-kpa | **Kiswahili** : 'àba\n - *Bbadha* : \"'àba\" -> FR: \"Je vais à la maison\" | SW: \"Naenda nyumbani\"\n - *Bbadha* :",
-        "latency_ms": 4944.2
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 494,
+        "response_preview": "### Terme Spécifié\n\n`Bbadha 'àba` (SautiLM-Jua-STEM) : **SautiLM-Jua-STEM** ; **SautiLM-STEM** ; **SautiLM-Bbadha** ; **SautiLM-Kola-Education** ; **SautiLM-Education** ; **SautiLM-Study** ; **SautiLM-Study-Research** ; **SautiLM-Study-Data** ; **SautiLM-Study-Interactions** ; **SautiLM-Study-Context** ; **SautiLM-Stud",
+        "latency_ms": 3184.7
       },
       {
         "id": "BBADHA-LEX-006",
         "module": "SautiLM-Lex",
         "category": "nature_lexicon",
-        "chrf_pp": 28.87,
-        "bleu": 9.57,
+        "chrf_pp": 31.97,
+        "bleu": 10.46,
         "keyword_accuracy": 66.67,
         "matched_keywords": [
           "mwituni",
           "forêt"
         ],
-        "response_chars": 223,
-        "response_preview": "En **Bbadha (Ituri, RDC)**, l'équivalent de **\"dans la forêt\"** (Kiswahili : **mwituni** | *Anglais* : **dans la rivière**), est :\n\n- **Mot Bbadha** : **d'yà**\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical",
-        "latency_ms": 2131.6
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 184,
+        "response_preview": "En **Bbadha (Kilendu)**, l'équivalent de **\"dans la forêt\"** (Kiswahili : **mwituni**) est :\n\n- **Mot Bbadha** : **bba**\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical",
+        "latency_ms": 1660.4
       },
       {
         "id": "BBADHA-LEX-007",
         "module": "SautiLM-Lex",
         "category": "climate_lexicon",
-        "chrf_pp": 21.11,
-        "bleu": 2.85,
+        "chrf_pp": 18.82,
+        "bleu": 4.0,
         "keyword_accuracy": 33.33,
         "matched_keywords": [
           "bbě"
         ],
-        "response_chars": 467,
-        "response_preview": "### Fiche Lexicale SautiLM-Lex : **bbě**\n\n- **Langue** : Bbadha (Kilendu - Ituri, Est de la RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : - | **Kiswahili** : bbo\n - *Bbadha* : \"bbě\" -> FR: \"Le chien a mangé le canard\" | SW: \"Kamba wote wako wote\"\n - *Bbad",
-        "latency_ms": 4723.8
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 170,
+        "response_preview": "### Ordre Phonétique et Terme Scomplicé\n\n- **Français** : **bbadha** (langue parlée)\n- **Kiswahili** : **bbě** (langue écrite)\n- **Anglaise** : **bbadha** (langue parlée)",
+        "latency_ms": 1596.6
       },
       {
         "id": "BBADHA-LEX-008",
         "module": "SautiLM-Lex",
         "category": "health_lexicon",
-        "chrf_pp": 18.08,
-        "bleu": 3.16,
+        "chrf_pp": 11.68,
+        "bleu": 1.85,
         "keyword_accuracy": 25.0,
         "matched_keywords": [
           "bba"
         ],
-        "response_chars": 451,
-        "response_preview": "### Fiche Lexicale SautiLM-Lex : **bba**\n\n- **Langue** : Bbadha (Kilendu - Ituri, RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : - | **Kiswahili** : bba, bbadha, bbadha\n - *Bbadha* : \"bba-kpa\" -> FR: \"Il a mangé de la viande bbadha\" | SW: \"Alimwaza wazi\"\n ",
-        "latency_ms": 4482.7
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "medicinal_plant",
+            "cough_indication",
+            "dosage_precaution"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 135,
+        "response_preview": "### Terme Lépticomatique Bbadha (**bba**)\n\n- **Français** : **bba**\n- **Kiswahili** : **bba**\n- **Angla** : **bba**\n- **Vba** : **bba**",
+        "latency_ms": 1437.3
       },
       {
         "id": "BBADHA-LEX-009",
         "module": "SautiLM-Lex",
         "category": "polysemy_and_tones",
-        "chrf_pp": 13.81,
-        "bleu": 2.34,
+        "chrf_pp": 14.92,
+        "bleu": 3.36,
         "keyword_accuracy": 25.0,
         "matched_keywords": [
           "bbù"
         ],
-        "response_chars": 459,
-        "response_preview": "### Droit Socio-Civile (SautiLM-Ius)\n\n**Vocabulaire Bbadha :** Bbadha -> **b.json** | Français -> **civil, gouverneur, etc.**\n\n1. **Sens L1 (LangueKiswahili) :** Bbadha -> [ ] | Français -> [ ]\n - *Étape 1* : \"bbù\" (g.c.) -> Kifarati ya mtti ya mamboga, (kwist) | Kifarati ya mamboga -> Kifarati ya mchanga\n - *Étape 2* ",
-        "latency_ms": 4881.8
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "hole_well_sense",
+            "dowry_sense"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 185,
+        "response_preview": "### Ordre Phonétique et Semences (**bbù**)\n\n- **Kiswahili** : *bbadha* (langue) -> **Français** : **\"bbadha\"** (1)\n- **Français** : \"bbadha\" (langue) -> **Kiswahili** : **\"bbadha\"** (1)",
+        "latency_ms": 1731.0
       },
       {
         "id": "BBADHA-LEX-010",
         "module": "SautiLM-Lex",
         "category": "family_lexicon",
-        "chrf_pp": 22.33,
-        "bleu": 2.73,
+        "chrf_pp": 20.56,
+        "bleu": 3.42,
         "keyword_accuracy": 25.0,
         "matched_keywords": [
           "wakú"
         ],
-        "response_chars": 422,
-        "response_preview": "### Fiche Lexicale SautiLM-Lex : **wakú**\n\n- **Langue** : Bbadha (Kilendu - Ituri, Est de la RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : - | **Kiswahili** : kwakú\n - *Bbadha* : \"kwakú\" -> FR: \"C'est le chien de ma famille\" | SW: \"Ni kwa mwanao wa wanamu",
-        "latency_ms": 4580.5
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 340,
+        "response_preview": "### Fiche Lexicale Bbadha : **wakú**\n\n- **Langue** : Bbadha (Kilendu - Ituri, Est de la RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : un chien, un chat, un lapin, un gosse, un chien, un chat, un lapin, un gosse, un chien, un chat, **bbadha** (Kilendu - It",
+        "latency_ms": 3135.8
       },
       {
         "id": "BBADHA-EDU-011",
         "module": "SautiLM-Edu",
         "category": "science_in_bbadha",
-        "chrf_pp": 42.42,
-        "bleu": 6.25,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "ddà",
-          "bbě",
-          "ágó"
-        ],
-        "response_chars": 494,
-        "response_preview": "### Cycle de l'Eau et Protection des Sols (SautiLM-Edu)\n\n**Vocabulaire Bbadha :** Eau = **ddà** | Pluie = **bbě** | Arbre = **ágó**\n\n1. **Évaporation :** La chaleur du soleil (**ddà**) transforme l'eau (**băkä**) des rivières et du lac Albert en vapeur.\n2. **Condensation :** En montant, la vapeur refroidit et forme les",
-        "latency_ms": 3829.4
+        "chrf_pp": 23.97,
+        "bleu": 4.16,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "water_cycle",
+            "rain_cycle",
+            "forest_protection"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 366,
+        "response_preview": "### Évaluation Hydrique (SautiLM-Jua-Agri)\n\n1. **Cycle de l'eau :** **SautiLM-Jua-Agri** collecte et transforme les pluies sèches en eau potable, les pluies acides en eau pure et les ravissages en eau.\n2. **Protection des sols :** Utiliser des techniques de **bambouillage, compostage, compostage et irrigation** pour pr",
+        "latency_ms": 2532.7
       },
       {
         "id": "BBADHA-MED-012",
         "module": "SautiLM-Med",
         "category": "health_in_bbadha",
-        "chrf_pp": 38.93,
-        "bleu": 10.48,
-        "keyword_accuracy": 66.67,
+        "chrf_pp": 16.83,
+        "bleu": 4.69,
+        "keyword_accuracy": 33.33,
         "matched_keywords": [
-          "ddà",
           "SRO"
         ],
-        "response_chars": 620,
-        "response_preview": "### Protocole Santé Communautaire : Eau + SRO (Sikhi-Mathsa)\n\n**Vocabulaire Bbadha :** Eau = **ddà** | Pluie = **ddi** | Soleil = **ddi** | Arbre = **ddi**\n\n1. **Étape 1 - Filtration :** Filtrer l'eau (**ddi**) à travers un linge propre et plié pour retenir les particules en suspension.\n2. **Étape 2 - Ébullition ou Chl",
-        "latency_ms": 4373.4
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 206,
+        "response_preview": "### Purification de l'Eau (SRO)\n\n1. **Sulfate de Sodium (SRO) :** Ajouter **100-1000 mg de SO42K** à l'eau filtrée.\n2. **Sulfate de Fer (SRO) :** Ajouter **100-1000 mg de SO42K** à l'eau filtrée après Rins.",
+        "latency_ms": 2028.1
       },
       {
         "id": "BBADHA-MATH-013",
         "module": "SautiLM-Math",
         "category": "contextual_math",
-        "chrf_pp": 31.78,
-        "bleu": 7.6,
-        "keyword_accuracy": 0.0,
-        "matched_keywords": [],
-        "response_chars": 289,
-        "response_preview": "### Calcul de Capital (SautiLM-Math)\n\n1. **Étape 1 (Part de l'exercice) :**\n - 20 membres * 3 parts = ** 60 parts**\n2. **Étape 2 (Éparghe de l'argent total) :**\n - 60 parts * 2000 FC = **80000 FC**\n\n**Résultat final :** Le capital total à régler en **Bunia (Kilendu)** est de **80000 FC**.",
-        "latency_ms": 2780.3
+        "chrf_pp": 40.21,
+        "bleu": 12.11,
+        "keyword_accuracy": 50.0,
+        "matched_keywords": [
+          "120000"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "exact_capital"
+          ],
+          "failed_checks": [
+            "intermediate_parts"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 208,
+        "response_preview": "### Calcul Simplifié (SautiLM-Jua-Fin)\n\n1. **Total des parts :** `20 * 3 * 2000 = **60000 FC**` (60 000 parts * 2000 FC/part = **1200000 FC**).\n2. **Capital total :** `(20 * 3 * 2000) / 200000 = **1000 FC**`.",
+        "latency_ms": 2561.9
       },
       {
         "id": "BBADHA-IUS-014",
         "module": "SautiLM-Ius",
         "category": "legal_linguistic_rights",
-        "chrf_pp": 33.84,
-        "bleu": 7.59,
-        "keyword_accuracy": 33.33,
+        "chrf_pp": 32.87,
+        "bleu": 9.72,
+        "keyword_accuracy": 66.67,
         "matched_keywords": [
-          "18"
+          "18",
+          "Bbadha"
         ],
-        "response_chars": 607,
-        "response_preview": "### Droit Constitutionnel Congolais : Langue d'Information & Droit à la Démobilisation (SautiLM-Ius)\n\n**Référence légale :** **Loi n° 015/2002 modifiée par la Loi n° 16/008 du 15 juillet 2016** (ou la version contenant les articles 18, 19, et 20).\n\n1. **Locuteur principal et portée sociale :** Le texte aborde le **l'in",
-        "latency_ms": 4627.7
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 292,
+        "response_preview": "### Répère Juridique (SautiLM-Jua-Ius)\n\nLa **RDC** prévoit l'**Article 18** sur la langue d'information d'une personne arrêtée (locuteur Bbadha) et la **Durée de Garde à Vue** (15 jours minimum).\n\n*Citation vérifiée : **Loi sur la Langue d'Information d'une Personne Arrêtée (RDC, Art. 18)**.",
+        "latency_ms": 2827.3
       },
       {
         "id": "BBADHA-VOICE-015",
         "module": "SautiLM-Voice",
         "category": "phonetics_and_tones",
-        "chrf_pp": 18.35,
-        "bleu": 2.87,
-        "keyword_accuracy": 50.0,
+        "chrf_pp": 15.68,
+        "bleu": 3.1,
+        "keyword_accuracy": 25.0,
         "matched_keywords": [
-          "Bbadha",
-          "tonal"
+          "Bbadha"
         ],
-        "response_chars": 524,
-        "response_preview": "### Droit Phonétique Congolais : Caractéristiques Phonétiques (SautiLM-Lex)\n\n**Vocabulaire Bbadha :** Phonétique, *Kiswahili* (Lugosi / kufunguliwa, kukamata; +1 à +3), articulation, discours, vocab (langue), intonation, rythme, tonal, lexicographie, phonofotation, phonogravimetrie.\n\n1. **Base (Letters of the Alphabet)",
-        "latency_ms": 4531.8
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 142,
+        "response_preview": "### Phonétique de la Langue Bbadha (Kilendu)\n\n- **Phonétique principale :** **Vibba (vù)**\n- **Phonétique latente :** **Ké** (moins fréquente)",
+        "latency_ms": 1578.4
       }
     ]
   },
   "hybrid_cpu": {
-    "model_name": "SautiLM Jua (272.36 MB INT8, CPU, Hybrid RAG+Solver)",
+    "model_name": "SautiLM Jua (283.48 MB INT8, CPU, Hybrid RAG+Solver)",
     "language": "Bbadha (Kilendu - ISO 639-3: led)",
     "benchmark_version": "bbadha_eval_v1",
     "num_samples": 15,
     "metrics": {
-      "mean_chrf_pp": 34.15,
-      "mean_bleu": 9.58,
-      "mean_keyword_accuracy": 68.33,
-      "mean_latency_ms": 4267.2,
-      "total_eval_seconds": 64.01
+      "mean_chrf_pp": 27.6,
+      "mean_bleu": 9.06,
+      "mean_keyword_accuracy": 58.89,
+      "mean_semantic_accuracy": 76.67,
+      "mean_latency_ms": 2602.1,
+      "total_eval_seconds": 39.03
     },
     "results": [
       {
         "id": "BBADHA-LEX-001",
         "module": "SautiLM-Lex",
         "category": "polysemy_and_tones",
-        "chrf_pp": 32.63,
-        "bleu": 5.18,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "ddà",
-          "maji",
-          "eau",
-          "rivière"
-        ],
-        "response_chars": 354,
-        "response_preview": "En **Kiswahili** (langue famille **Bbadha**), **ddà** (souvent écrit *kpa rà da fùtsi dda-d'ù djo) signifie :\n\n- **Français** : -loin, -ya ; eau, mto, la rivière, kpa rà da fùtsi dda-d'ù djo\n- **Kiswahili** : kuwa refu, être long, -mbali ; maji ; dda d'e ke, ke-k\n- **Exemple vérifié** : *Afù tsi ddà che (SW: Bakora hii",
-        "latency_ms": 3849.0
-      },
-      {
-        "id": "BBADHA-LEX-002",
-        "module": "SautiLM-Lex",
-        "category": "tonal_minimal_pair",
-        "chrf_pp": 25.82,
-        "bleu": 3.96,
-        "keyword_accuracy": 66.67,
-        "matched_keywords": [
-          "dà",
-          "ddà",
-          "maji",
-          "eau"
-        ],
-        "response_chars": 447,
-        "response_preview": "### Dictionnairie SautiLM-Lex\n\n**Mot Bbadha :** dà | **Grammaire :** kupe ke | **Kiswahili :** kuwa refu, être long, -mbali ; maji ; dda d'e ke, ke-k\n\n1. **Étape 1 (Terme lexical) :** 'à | **Étape 2 (Grammaire relevée) :** -\n - *Français* : -loin, -ya ; l'eau, mto, la rivière, kpa rà da fùtsi dda-d'ù djo\n - *Kiswahili*",
-        "latency_ms": 5133.8
-      },
-      {
-        "id": "BBADHA-LEX-003",
-        "module": "SautiLM-Lex",
-        "category": "glottal_initial",
-        "chrf_pp": 50.28,
-        "bleu": 33.41,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "'ábba",
-          "mjini",
-          "village"
-        ],
-        "response_chars": 327,
-        "response_preview": "En **Kiswahili (Shambaana)**, **'ábba** (ou **mjini**), dans le sens figuratif ou lexical, signifie :\n\n- **Français** : au village | **Kiswahili** : mjini\n- **Anglais** : village, au village (kuona; voir: mjini, village)\n- **SautiLM-Lex** : 'ábba | FR: Je vais au village maintenant pour éviter que la pluie me trouve ic",
-        "latency_ms": 3029.9
-      },
-      {
-        "id": "BBADHA-LEX-004",
-        "module": "SautiLM-Lex",
-        "category": "glottal_initial",
-        "chrf_pp": 34.13,
-        "bleu": 12.18,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "'ádzá",
-          "nyumbani",
-          "maison"
-        ],
-        "response_chars": 189,
-        "response_preview": "En **Kiswahili** (Bbadha: **'ádzá**) :\n\n- **Mot Bbadha** : 'ádzá\n- **Grammaire** : - (Terme lexical)\n- **Français** : à la maison (mbali ya nyumbani; à la maison, kwa nyumbani; à la maison)",
-        "latency_ms": 2095.0
-      },
-      {
-        "id": "BBADHA-LEX-005",
-        "module": "SautiLM-Lex",
-        "category": "kinship_lexicon",
-        "chrf_pp": 37.48,
-        "bleu": 4.98,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "'àba",
-          "baba",
-          "père"
-        ],
-        "response_chars": 453,
-        "response_preview": "En langue **Bbadha (Kilendu)**, **'àba** (ou **baba** (*boireé*) can. 1. **Mot** : **'àba** | **Grammaire** : **alibaba** | **Kiswahili** : baba, ao: baba mdogo/baba mkubwa | **Français** : mon père, ou: mon oncle paternel. Exemple: 'àba rà mi su tsó nã kūkútsó nju ró ri ká ngbă yàyá? (SW: Mama, sababu gani baba aliend",
-        "latency_ms": 4159.1
-      },
-      {
-        "id": "BBADHA-LEX-006",
-        "module": "SautiLM-Lex",
-        "category": "nature_lexicon",
-        "chrf_pp": 31.93,
-        "bleu": 7.59,
-        "keyword_accuracy": 66.67,
-        "matched_keywords": [
-          "mwituni",
-          "forêt"
-        ],
-        "response_chars": 357,
-        "response_preview": "En **Bbadha (Kilendu)**, l'équivalent de **\"dans la forêt\"** (Kiswahili : **mwituni**) est :\n\n- **Mot Bbadha** : **ma**\n- **Grammaire** : Terme lexical\n- **Kiswahili** : kukata pumzi ; mzungu, un blanc, (kuona | FR: mettre ; clairement, ; décoration, mapambo,. Exemple: ke là ngba ra djo (SW: Alalishe mtoto kitandani | ",
-        "latency_ms": 4891.7
-      },
-      {
-        "id": "BBADHA-LEX-007",
-        "module": "SautiLM-Lex",
-        "category": "climate_lexicon",
-        "chrf_pp": 22.54,
-        "bleu": 2.56,
-        "keyword_accuracy": 33.33,
-        "matched_keywords": [
-          "bbě"
-        ],
-        "response_chars": 377,
-        "response_preview": "Selon le dictionnaire Bbadha **VERIFIE**, le mot **bbě** (ou **b'zà**) dans la langue **Kiswahili (Yule)**, gbl. **kuupumisha, kutojua kulinda siri ; samaki (jina ya desturi; nom général) ; wa eneo sawa** (par exemple : **ké rà ritsi bběbbě bbo ró, nzĩ tì lò che ke kusó (SW: Yeye, anasema yoyote, usimwambie kitu | FR: ",
-        "latency_ms": 6220.5
-      },
-      {
-        "id": "BBADHA-LEX-008",
-        "module": "SautiLM-Lex",
-        "category": "health_lexicon",
-        "chrf_pp": 20.41,
-        "bleu": 2.75,
+        "chrf_pp": 20.92,
+        "bleu": 4.15,
         "keyword_accuracy": 25.0,
         "matched_keywords": [
-          "bba"
+          "ddà"
         ],
-        "response_chars": 514,
-        "response_preview": "En langue **Bbadha (Kilendu)**, **bbà** (ou **b'yô** | **Français** : laisser, abandonner, omettre, cesser, oublier ; relâcher ; nom d'une arbuste, dont on fait des cordes (yenyi kuitwa \"bbambi\"; qui s'appellent: bbambi)\n\n1. **Précaution et Fononnalisation (SautiLM-Lex) :**\n - Terme lexical Bbadha : **bba** | Langue co",
-        "latency_ms": 5940.2
-      },
-      {
-        "id": "BBADHA-LEX-009",
-        "module": "SautiLM-Lex",
-        "category": "polysemy_and_tones",
-        "chrf_pp": 23.59,
-        "bleu": 6.3,
-        "keyword_accuracy": 50.0,
-        "matched_keywords": [
-          "bbù",
-          "puits"
-        ],
-        "response_chars": 318,
-        "response_preview": "En **Kiswahili** :\n\n- **Sens Bbadha** : **bbù**\n- **Grammaire** : - (G3)\n- **Français** : trou, un puits, une cavité dans la terre (une fosse -) ; très silencieux\n\n**Exemple vérifié :** *\"bbù nănga ddà che ró, nzĩ ní chì bbù nà (SW: Shimo ni ndefu, usianguke ndani?\" -> FR: Le puits est profond, ne tombe pas dedans.)*",
-        "latency_ms": 3050.7
-      },
-      {
-        "id": "BBADHA-LEX-010",
-        "module": "SautiLM-Lex",
-        "category": "family_lexicon",
-        "chrf_pp": 46.84,
-        "bleu": 12.73,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "wakú",
-          "ukanda",
-          "mtoto",
-          "enfant"
-        ],
-        "response_chars": 376,
-        "response_preview": "Selon le dictionnaire Bbadha **VERIFIE**, le mot **wakú** (Mot: **wakú**) signifie :\n\n- **Français** : bandoulière, d'enfant, berceau\n- **Kiswahili** : ukanda, cha mlezi wa mtoto\n- **Exemple vérifié** : fúle dhó wakú tà b'lo (SW: Alikwisha kuwa na ukanda ya mtoto | FR: Elle a déjà une bandoulière d'enfant (maana yake a",
-        "latency_ms": 3800.7
-      },
-      {
-        "id": "BBADHA-EDU-011",
-        "module": "SautiLM-Edu",
-        "category": "science_in_bbadha",
-        "chrf_pp": 38.29,
-        "bleu": 8.49,
-        "keyword_accuracy": 100.0,
-        "matched_keywords": [
-          "ddà",
-          "bbě",
-          "ágó"
-        ],
-        "response_chars": 534,
-        "response_preview": "### Cycle de l'Eau et Protection des Sols (SautiLM-Edu)\n\n**Vocabulaire Bbadha :** Eau = **ddà** | Pluie = **bbě** | Soleil = **ágó**\n\n1. **Évaporation :** La chaleur du soleil (**ágó**) transforme l'eau (**ddà**) des rivières et du lac Albert en vapeur.\n2. **Condensation :** En montant, la vapeur refroidit et forme les",
-        "latency_ms": 4569.6
-      },
-      {
-        "id": "BBADHA-MED-012",
-        "module": "SautiLM-Med",
-        "category": "health_in_bbadha",
-        "chrf_pp": 40.19,
-        "bleu": 11.52,
-        "keyword_accuracy": 66.67,
-        "matched_keywords": [
-          "ddà",
-          "bbù"
-        ],
-        "response_chars": 629,
-        "response_preview": "### Protocole Santé Communautaire : Eau Propre (SautiLM-Med)\n\n**Vocabulaire Bbadha :** Eau = **ddà** | Pluie = **bbù** | Soleil = **bbärg** | Arbre = **nęù**\n\n1. **Étape 1 - Filtration :** Filtrer l'eau (**ddà**) à travers un linge propre pour retenir les particules en suspension.\n2. **Étape 2 - Ébullition ou Chloratio",
-        "latency_ms": 4943.8
-      },
-      {
-        "id": "BBADHA-MATH-013",
-        "module": "SautiLM-Math",
-        "category": "contextual_math",
-        "chrf_pp": 32.74,
-        "bleu": 5.75,
-        "keyword_accuracy": 0.0,
-        "matched_keywords": [],
-        "response_chars": 247,
-        "response_preview": "### Calcul de Capital (SautiLM-Math)\n\n1. **Étape 1 (Part de l'économie) :**\n - 20 membres * 3 parts = **60 part\n2. **Étape 2 (Épargne pour le village) :**\n - 60 part * 2000 FC = **80000 FC\n**Résultat final :** Le capital total est de **80000 FC**.",
-        "latency_ms": 2703.9
-      },
-      {
-        "id": "BBADHA-IUS-014",
-        "module": "SautiLM-Ius",
-        "category": "legal_linguistic_rights",
-        "chrf_pp": 57.92,
-        "bleu": 24.43,
-        "keyword_accuracy": 66.67,
-        "matched_keywords": [
-          "18",
-          "48"
-        ],
-        "response_chars": 682,
-        "response_preview": "### Dictionnaire IBBDHA & Droit Constitutionnel Congolais (SautiLM-Ius)\n\n**Référence légale :** **Articles 18 et 19 de la Constitution de la RDC**.\n\n1. **L'information à la demande (Information Primaire) :**\n - Toute personne arrêtée doit être informée immédiatement des motifs de son arrestation et de son séjour à l'ob",
-        "latency_ms": 4670.1
-      },
-      {
-        "id": "BBADHA-VOICE-015",
-        "module": "SautiLM-Voice",
-        "category": "phonetics_and_tones",
-        "chrf_pp": 17.41,
-        "bleu": 1.88,
-        "keyword_accuracy": 50.0,
-        "matched_keywords": [
-          "Bbadha",
-          "dd"
-        ],
-        "response_chars": 534,
-        "response_preview": "### Dictionnariat Phonétique (SautiLM-Lex)\n\n**Vocabulaire Bbadha Vérifié :**\n1. **Français** : pousser, kuota; germer (kwa mahalagi, mbindi; pour les haricots, le. Exemple: gädha d'à d'à né ri g kä ddo tho (SW: Kunakwisha pita siku nne tangu mahalagi imeanza kutokea | FR: Tl a déjà quatre jours, que les haricots ont co",
-        "latency_ms": 4950.6
-      }
-    ]
-  },
-  "hybrid_gpu": {
-    "model_name": "SautiLM Jua (272.36 MB INT8, GPU, Hybrid RAG+Solver)",
-    "language": "Bbadha (Kilendu - ISO 639-3: led)",
-    "benchmark_version": "bbadha_eval_v1",
-    "num_samples": 15,
-    "metrics": {
-      "mean_chrf_pp": 31.4,
-      "mean_bleu": 7.32,
-      "mean_keyword_accuracy": 68.33,
-      "mean_latency_ms": 2841.4,
-      "total_eval_seconds": 42.62
-    },
-    "results": [
-      {
-        "id": "BBADHA-LEX-001",
-        "module": "SautiLM-Lex",
-        "category": "polysemy_and_tones",
-        "chrf_pp": 25.2,
-        "bleu": 3.81,
-        "keyword_accuracy": 75.0,
-        "matched_keywords": [
-          "ddà",
-          "eau",
-          "rivière"
-        ],
-        "response_chars": 443,
-        "response_preview": "### Fiche Lex **Bbadha**\n\n- **Langue** : Kiswahili (Swahili)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens et exemples :**\n1. **Français** : -loin, -ya ; l'eau, mto, la rivière, kpa rà da fùtsi dda-d'ù djo. Exemple: 'afù tsi ddà che (SW: Bakora hii ni refu | FR: Ce bâton est long)\n - *Bbadha* ",
-        "latency_ms": 5041.2
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 243,
+        "response_preview": "### Ordre Grammo-Phonétique et Exemples (**ddà**)\n\n- **Kiswahili** : **bbadha** (1) -> **kpa** (2)\n- **Français** : **d'un nom** (1) -> **d'un nom** (2)\n- **Exemple vérifié** : *afù tsi ddà che (SW: Bakora hii ni refu | FR: Ce bâton est long*)",
+        "latency_ms": 2498.6
       },
       {
         "id": "BBADHA-LEX-002",
         "module": "SautiLM-Lex",
         "category": "tonal_minimal_pair",
-        "chrf_pp": 29.74,
-        "bleu": 7.6,
+        "chrf_pp": 21.24,
+        "bleu": 9.53,
         "keyword_accuracy": 66.67,
         "matched_keywords": [
           "dà",
@@ -519,123 +399,190 @@
           "ddà",
           "maji"
         ],
-        "response_chars": 265,
-        "response_preview": "### Droit Econômique & Terme Lexique : **ddà**\n\n- **Langue** : Bbadha (Kilendu - Ituri, RDC)\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical\n\n**Sens figuré :** - (ou: | Grammaire: - | Kiswahili: kuwa refu, être long, -mbali; maji ; dda d'e ke, ke-k)",
-        "latency_ms": 1913.0
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [
+            "da_meaning",
+            "dda_meaning"
+          ],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 177,
+        "response_preview": "### Conduite Grammatique (SautiLM-Lex)\n\n- **Français** : passer ; la langue | **Kiswahili** : kuwa refu, -mbali ; maji, mto\n- **Conduite grammaticale** : ddà | ddà (SautiLM-Lex)",
+        "latency_ms": 1848.9
       },
       {
         "id": "BBADHA-LEX-003",
         "module": "SautiLM-Lex",
         "category": "glottal_initial",
-        "chrf_pp": 28.74,
-        "bleu": 5.66,
+        "chrf_pp": 25.67,
+        "bleu": 2.68,
         "keyword_accuracy": 100.0,
         "matched_keywords": [
           "'ábba",
           "mjini",
           "village"
         ],
-        "response_chars": 310,
-        "response_preview": "En **kiskawa (kwa)**, le mot **'ábba** (ou **mjini**) signifie :\n\n- **Français** : au village | **Kiswahili** : mjini\n- **Anglais** : en route / kukamata, se diriger vers le village, (kuona, kwanza, kwanza, en route, kwanza, kwanza, kinyuminga, kinyuminga)\n- **Phrase lexicale** : 'ábba: kwa... | 'ábba: kwa...",
-        "latency_ms": 1885.0
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 116,
+        "response_preview": "En **SautiLM-Lex**, le mot **'ábba** (langue Bbadha) signifie :\n\n- **Kiswahili** : mjini\n- **Français** : au village",
+        "latency_ms": 1371.6
       },
       {
         "id": "BBADHA-LEX-004",
         "module": "SautiLM-Lex",
         "category": "glottal_initial",
-        "chrf_pp": 42.72,
-        "bleu": 17.28,
+        "chrf_pp": 31.84,
+        "bleu": 8.77,
         "keyword_accuracy": 100.0,
         "matched_keywords": [
           "'ádzá",
           "nyumbani",
           "maison"
         ],
-        "response_chars": 381,
-        "response_preview": "En **Kiswahili** (Shamba-, kujaa: nyumbani, kwa kutumika, ndogo, mbwa, kijana, kijiko, kijiko-mbali, kijiko-mbali; unidémé), **'ádzá** (matafushi | **Français** : à la maison) signifie :\n\n- **Mot Bbadha** : 'ádzá\n- **Grammaire** : Terme lexical\n- **Kiswahili** : nyumbani / kwa kutumika | fr. sortir vite de la maison po",
-        "latency_ms": 2296.6
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 140,
+        "response_preview": "En **SautiLM-Lex**, le mot **'ádzá** (langue Bbadha) signifie :\n\n- **Kiswahili** : nyumbani | Français : à la maison\n- **Anglais** : at home",
+        "latency_ms": 1363.7
       },
       {
         "id": "BBADHA-LEX-005",
         "module": "SautiLM-Lex",
         "category": "kinship_lexicon",
-        "chrf_pp": 34.61,
-        "bleu": 3.97,
-        "keyword_accuracy": 100.0,
+        "chrf_pp": 34.67,
+        "bleu": 13.32,
+        "keyword_accuracy": 66.67,
         "matched_keywords": [
           "'àba",
-          "baba",
           "père"
         ],
-        "response_chars": 583,
-        "response_preview": "Selon le dictionnaire Bbadha Vérifie (**SautiLM-Lex**), le mot **'àba** (griechon : **baba**, **mãe** | Français : **mon père**, ou: **mon oncle paternel**) possède deux sens essentiels selon la grammaire **Kiswahili (baba, ao: baba mdogo/baba mkubwa)** :\n\n1. **L'habitude ou la pratique** (*SautiLM-Lex* : 'àbà djo:bbà-",
-        "latency_ms": 2890.3
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 190,
+        "response_preview": "Selon **Bbadha Verifiable (SautiLM-Lex)** :\n\n- **Rôle grammatical** : **àba** (langue parlée)\n- **Français** : mon père ; ou: mon oncle paternel\n- **Grammaire** : Fiche lexique (SautiLM-Lex)",
+        "latency_ms": 1699.1
       },
       {
         "id": "BBADHA-LEX-006",
         "module": "SautiLM-Lex",
         "category": "nature_lexicon",
-        "chrf_pp": 31.35,
-        "bleu": 8.1,
+        "chrf_pp": 27.29,
+        "bleu": 18.07,
         "keyword_accuracy": 66.67,
         "matched_keywords": [
           "mwituni",
           "forêt"
         ],
-        "response_chars": 340,
-        "response_preview": "En **Bbadha (Kilendu)**, l'équivalent de **\"dans la forêt\"** (Kiswahili : **mwituni**) est :\n\n- **Mot Bbadha** : **kpa**\n- **Grammaire** :** : - | **Kiswahili** : kukata pumzi ; mzungu, un blanc, (kuona\n- **Exemple vérifié** : nzï ni-dä lani la rô (SW: Ukimbie polepole kusudi usikate pumzi | FR: Cours doucement pour ne",
-        "latency_ms": 2452.1
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 198,
+        "response_preview": "Selon **A.Dha** (Bbadha, RDC), l'équivalent de « dans la forêt » (mwituni) en **Kiswahili** (bbadha) est :\n\n- **Mot Bbadha** : mwituni\n- **Phonétique** : Non spécifié\n- **Grammaire** : Terme lexical",
+        "latency_ms": 1982.8
       },
       {
         "id": "BBADHA-LEX-007",
         "module": "SautiLM-Lex",
         "category": "climate_lexicon",
-        "chrf_pp": 20.05,
-        "bleu": 1.96,
-        "keyword_accuracy": 33.33,
+        "chrf_pp": 28.53,
+        "bleu": 5.73,
+        "keyword_accuracy": 66.67,
         "matched_keywords": [
-          "bbě"
+          "bbě",
+          "pluies"
         ],
-        "response_chars": 522,
-        "response_preview": "Selon le dictionnaire Bbadha **VERIFIE**, le mot **bbě** (ou **b'zà**) dans tonalité **Kiswahili (ufanikamazierwa / kufanua, kutojua kulinda siri; nom général) :\n\n- **Français** : ébruiter, ne pas savoir garder un secret ; poisson ; plat\n- **Kiswahili** : kuvumisha, kutojua kulinda siri ; samaki (jina ya desturi; nom g",
-        "latency_ms": 3074.3
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 603,
+        "response_preview": "Selon le dictionnaire Bbadha Verifié (**bbě**), le mot **bbě** (montant de pluies) signifie :\n\n- **Langue** : Bbadha (Kilendu - Ituri, RDC)\n- **Grammaire** : kuamusha ; kutupa angani ; jambo la kufanya yoyote kwa kujivutia angalisho ya watu ; kwa kuonyesha uzuri wake (kwa wabinti | Francais: lever ; jeter en l'air ; po",
+        "latency_ms": 4521.4
       },
       {
         "id": "BBADHA-LEX-008",
         "module": "SautiLM-Lex",
         "category": "health_lexicon",
-        "chrf_pp": 19.02,
-        "bleu": 2.44,
+        "chrf_pp": 16.58,
+        "bleu": 3.34,
         "keyword_accuracy": 25.0,
         "matched_keywords": [
           "bba"
         ],
-        "response_chars": 537,
-        "response_preview": "### Fiche Lexicale & Dictionnairie (SautiLM-Lex)\n\n- **Mot Bbadha** : bbà\n- **Grammaire** : Terme lexical\n- **Kiswahili** : kuacha, kusahau ; kuachilia ; jina la kijiti, ambacho hufanya makamba\n- **Français** : laisser, abandonner, omettre, cesser, oublier ; relâcher ; nom d'une arbuste, dont on fait des cordes (yenyi k",
-        "latency_ms": 3160.1
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "medicinal_plant",
+            "cough_indication",
+            "dosage_precaution"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 180,
+        "response_preview": "### Mot Bbadha Vérifié (bba) en Médecine Traditionnelle (SautiLM-Lex)\n\n- **Recherche** : bba (mot Bbadha)\n- **Préoccupation** : **L'eau**\n- **Dictionnaire** : **Bbadha** (Français)",
+        "latency_ms": 2063.9
       },
       {
         "id": "BBADHA-LEX-009",
         "module": "SautiLM-Lex",
         "category": "polysemy_and_tones",
-        "chrf_pp": 24.56,
-        "bleu": 3.75,
+        "chrf_pp": 22.9,
+        "bleu": 10.02,
         "keyword_accuracy": 75.0,
         "matched_keywords": [
           "bbù",
           "kisima",
           "puits"
         ],
-        "response_chars": 543,
-        "response_preview": "Selon le dictionnaire Bbadha *VERIFIE*, les deux sens du mot **bbù** (ou **b.json**) en **Kiswahili** :\n\n- **Sens 1 (L'eau, la rivière / mirimi ya mto, kwa mwengine) :**\n - **Français** : trou, un puits, une cavité dans la terre (une fosse - ; très silencieux\n - **Kiswahili** : tundu, kisima (shimo ya maji), shimo udon",
-        "latency_ms": 3032.6
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "hole_well_sense"
+          ],
+          "failed_checks": [
+            "dowry_sense"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 202,
+        "response_preview": "### Sens Exact (Bbadha \"bbù\")\n\n- **Kiswahili** : tundu ; kisima (shimo ya maji) ; shimo udongoni ; ukimya sana\n- **Français** : trou ; un puits ; une cavité dans la terre (une fosse -) ; très silencieux",
+        "latency_ms": 2102.8
       },
       {
         "id": "BBADHA-LEX-010",
         "module": "SautiLM-Lex",
         "category": "family_lexicon",
-        "chrf_pp": 45.28,
-        "bleu": 12.15,
+        "chrf_pp": 45.52,
+        "bleu": 12.36,
         "keyword_accuracy": 100.0,
         "matched_keywords": [
           "wakú",
@@ -643,83 +590,130 @@
           "mtoto",
           "enfant"
         ],
-        "response_chars": 382,
-        "response_preview": "Selon le dictionnaire Bbadha **VERIFY**, le mot **wakú** (griechon: **w.json**) signifie :\n\n- **Français** : bandoulière, d'enfant, berceau\n- **Kiswahili** : ukanda, cha mlezi wa mtoto\n- **Exemple vérifié** : fúle dhó wakú tà b'lo (SW: Alikwisha kuwa na ukanda ya mtoto | FR: Elle a déjà une bandoulière d'enfant (maana ",
-        "latency_ms": 2340.3
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 385,
+        "response_preview": "Selon le dictionnaire Bbadha Verifiable (**SautiLM-Lex**), le mot **wakú** (bandoulière) signifie :\n\n- **Français** : bandoulière ; d'enfant ; berceau\n- **Kiswahili** : ukanda ; cha mlezi wa mtoto\n- **Exemple** : fúle dhó wakú tà b'lo (SW: Alikwisha kuwa na ukanda ya mtoto | FR: Elle a déjà une bandoulière d'enfant (ma",
+        "latency_ms": 3574.9
       },
       {
         "id": "BBADHA-EDU-011",
         "module": "SautiLM-Edu",
         "category": "science_in_bbadha",
-        "chrf_pp": 39.13,
-        "bleu": 9.46,
-        "keyword_accuracy": 100.0,
+        "chrf_pp": 16.54,
+        "bleu": 2.28,
+        "keyword_accuracy": 66.67,
         "matched_keywords": [
           "ddà",
-          "bbě",
-          "ágó"
+          "bbě"
         ],
-        "response_chars": 504,
-        "response_preview": "### Cycle de l'Eau et Protection des Sols (SautiLM-Edu)\n\n**Vocabulaire Bbadha :** Eau = **ddà** | Pluie = **bbě** | Soleil = **ágó**\n\n1. **Évaporation :** La chaleur du soleil (**ágó**) transforme l'eau (**ddà**) des rivières et du lac Albert en vapeur.\n2. **Condensation :** En montant, la vapeur refroidit et forme les",
-        "latency_ms": 2630.0
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "water_cycle",
+            "rain_cycle",
+            "forest_protection"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 550,
+        "response_preview": "grammatical et les exemples vérifiés (**SautiLM-Edu**) :\n\n- **Cycle Grammaire :** **bbě** (SautiLM-Edu utilise le même cycle grammatical que **Bbadha** (SautiLM-Edu)\n- **Exemples vérifiés :** 1. **'a** (Français) : **afù tsi ddà che (FR: Quelqu'un de mauvais caractère dda)** | **Kiswahili** : kuamusha ; kutupa angani ;",
+        "latency_ms": 5025.4
       },
       {
         "id": "BBADHA-MED-012",
         "module": "SautiLM-Med",
         "category": "health_in_bbadha",
-        "chrf_pp": 36.81,
-        "bleu": 9.35,
+        "chrf_pp": 21.73,
+        "bleu": 6.44,
         "keyword_accuracy": 66.67,
         "matched_keywords": [
           "ddà",
-          "bbù"
+          "SRO"
         ],
-        "response_chars": 610,
-        "response_preview": "### Protocole Santé Communautaire : Eau Propre (S grondement (SautiLM-Med)\n\n**Vocabulaire Bbadha :** Eau = **ddà** | Pluie = **bbù** | Soleil = **bbăt** | Arbre = **nęù**\n\n1. **Étape 1 - Filtration :** Filtrer l'eau (**ddà**) à travers un linge propre et plié pour retenir les particules en suspension.\n2. **Étape 2 - Éb",
-        "latency_ms": 3165.4
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 266,
+        "response_preview": "### Étapes pour purifier l'eau (ddà) (SautiLM-Med)\n\n1. **Désinfecter le puits (ddà) :** Utiliser un **SRO (SautiLM-Jua-STEM)** pour désinfecter le puits et le fond du bassin.\n2. **SRO (SautiLM-Jua-STEM) :** Utiliser un **SRO** pour le fond et un **SRO** pour le sol.",
+        "latency_ms": 3527.8
       },
       {
         "id": "BBADHA-MATH-013",
         "module": "SautiLM-Math",
         "category": "contextual_math",
-        "chrf_pp": 27.41,
-        "bleu": 4.31,
+        "chrf_pp": 37.44,
+        "bleu": 12.69,
         "keyword_accuracy": 0.0,
         "matched_keywords": [],
-        "response_chars": 300,
-        "response_preview": "### Calcul de Capital (SautiLM-Math)\n\n1. **Étape 1 (Part de l'un à l'autre) :**\n - 20 membres x 3 parts = **60 part**\n2. **Étape 2 (Épaisseur de每個 membre) :**\n - 60 part x 20 parts = **1200 part**\n\n**Résultat final :** Le capital total réalisé par la cohésion de l'établissement est de **1200 part**.",
-        "latency_ms": 1998.8
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "intermediate_parts",
+            "exact_capital"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 193,
+        "response_preview": "### Calcul de Capital Coopératif (SautiLM-Jua-STEM)\n\n1. **Total des parts :** 20 + 3 = **23 mains** (2000 FC/mètre).\n2. **Capital total :** 23 * 2000 * 12000 = **14960000 FC** ($14.96 billion).",
+        "latency_ms": 2889.9
       },
       {
         "id": "BBADHA-IUS-014",
         "module": "SautiLM-Ius",
         "category": "legal_linguistic_rights",
-        "chrf_pp": 48.71,
-        "bleu": 18.15,
-        "keyword_accuracy": 66.67,
+        "chrf_pp": 42.68,
+        "bleu": 21.51,
+        "keyword_accuracy": 33.33,
         "matched_keywords": [
-          "18",
-          "Bbadha"
+          "18"
         ],
-        "response_chars": 713,
-        "response_preview": "### Droit Constitutionnel Congolais (SautiLM-Ius)\n\n**Référence légale :** **Articles 18 et 19 de la Constitution de la RDC**.\n\n1. **Information à fournir (SautiLM-Ius) :** Toute personne arrêtée doit être informée immédiatement des motifs de son arrestation et de son séjour dans une langue **parle de *bonne* langue** (",
-        "latency_ms": 3268.2
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 309,
+        "response_preview": "### Règle de la RDC (SautiLM-Ius)\n\nL'**article 18 de la Constitution de la RDC** stipule : \"L'auteur de l'acte d'arrestation doit être informé de son lieu de résidence et de son état de santé avant d'être arrêté, et la garde à vue doit être valable pendant au moins 5 jours à compter de l'acte d'arrestation.\"",
+        "latency_ms": 2425.7
       },
       {
         "id": "BBADHA-VOICE-015",
         "module": "SautiLM-Voice",
         "category": "phonetics_and_tones",
-        "chrf_pp": 17.68,
-        "bleu": 1.74,
-        "keyword_accuracy": 50.0,
+        "chrf_pp": 20.4,
+        "bleu": 4.96,
+        "keyword_accuracy": 25.0,
         "matched_keywords": [
-          "Bbadha",
-          "dd"
+          "Bbadha"
         ],
-        "response_chars": 537,
-        "response_preview": "### Droit Phonétique (SautiLM-Lex)\n\n**Vocabulaire Bbadha :**\n1. **Kiswahili ( Rupulent) :** kuona, croftre, kuota ; .. mä..yari) | FR: Tl a déjà quatre jours, que les haricots ont commencé à apparaître)\n2. **Kiswahili (Luxembérien) :** kukua, croftre, kuota ; .. mä..yari) | FR: pousser, kuota; germer (kwa mahalagi, mbi",
-        "latency_ms": 3472.4
+        "semantic_accuracy": 100.0,
+        "semantic_details": {
+          "semantic_pass": true,
+          "passed_checks": [],
+          "failed_checks": [],
+          "forbidden_hits": []
+        },
+        "response_chars": 222,
+        "response_preview": "### Analyse Phonétique SautiLM-Voice\n\n- **Phonétique principale :** Bbadha (Kilendu)\n- **Phonétique régionale :** Non spécifiée (nécessite clarification pour préciser)\n- **Rôle grammatical :** Langue parlée ; Bba-dha ; dhà",
+        "latency_ms": 2134.5
       }
     ]
-  }
+  },
+  "hybrid_gpu": null
 }
