@@ -1,6 +1,6 @@
 # SautiLM-Eval (Bbadha Edition)
 
-**SautiLM-Eval** is the official scientific evaluation benchmark and metrics suite for the **SautiLM** family of offline Edge-AI language models (**Jua**, **Nuru**, **Wazo**, **Moto**, **Kuu**, **Mali**), engineered in **Bunia, Ituri, Democratic Republic of the Congo** by **LosingTek Research** for **SautiLM**.
+**SautiLM-Eval** is the official scientific evaluation benchmark and metrics suite for the **SautiLM** family of offline Edge-AI language models (**Radi**, **Nuru**, **Jua**, **Wazo**, **Kuu**, **Mali**), engineered in **Bunia, Ituri, Democratic Republic of the Congo** by **LosingTek Research** for **SautiLM**.
 
 This benchmark currently focuses on **Bbadha (Kilendu - ISO 639-3: `led`)**, evaluating tonal orthographic accuracy, implosive consonant preservation (`bb`, `dd`, `dy`), trilingual lexical bridging (**Bbadha <-> Kiswahili <-> French/English**), and Bbadha-grounded domain reasoning across `SautiLM-Lex`, `SautiLM-Edu`, `SautiLM-Med`, `SautiLM-Math`, `SautiLM-Ius`, and `SautiLM-Voice`.
 
