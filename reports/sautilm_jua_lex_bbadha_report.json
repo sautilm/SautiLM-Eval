@@ -1,0 +1,770 @@
+{
+  "model": "sautilm-jua-lex.litertlm",
+  "raw_cpu": {
+    "model_name": "SautiLM Jua (283.48 MB INT8, CPU, Raw Parametric Weights)",
+    "language": "Bbadha (Kilendu - ISO 639-3: led)",
+    "benchmark_version": "bbadha_eval_v1",
+    "num_samples": 15,
+    "metrics": {
+      "mean_chrf_pp": 22.17,
+      "mean_bleu": 6.23,
+      "mean_keyword_accuracy": 32.78,
+      "mean_semantic_accuracy": 11.11,
+      "mean_latency_ms": 13017.1,
+      "total_eval_seconds": 195.26
+    },
+    "results": [
+      {
+        "id": "BBADHA-LEX-001",
+        "module": "SautiLM-Lex",
+        "category": "polysemy_and_tones",
+        "chrf_pp": 14.87,
+        "bleu": 4.87,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "ddà"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "water_river_sense",
+            "long_far_or_example"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 401,
+        "response_preview": "Le mot **Bbadha** (ddà) en Kiswahili et en français, **\"Dà\"** (d.json), signifie **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'un bon\"** ou **\"D'",
+        "latency_ms": 39317.4
+      },
+      {
+        "id": "BBADHA-LEX-002",
+        "module": "SautiLM-Lex",
+        "category": "tonal_minimal_pair",
+        "chrf_pp": 22.01,
+        "bleu": 2.5,
+        "keyword_accuracy": 50.0,
+        "matched_keywords": [
+          "dà",
+          "langue",
+          "ddà"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "da_meaning"
+          ],
+          "failed_checks": [
+            "dda_meaning"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 483,
+        "response_preview": "Dans la langue Bbadha, \"dà\" et \"ddà\" sont des mots différents, et leur signification est souvent ambiguë.\n\n* **Dà (Dà):**\n    * **Signification:** Un **\"dà\"** est un mot de **\"dà\"** (dà, dà, dà)\n    * **Usage:** Il est souvent utilisé pour indiquer un **\"dà\"** (dà, dà, dà) ou un **\"dà\"** (dà, dà, dà)\n    * **Exemple:**",
+        "latency_ms": 20269.7
+      },
+      {
+        "id": "BBADHA-LEX-003",
+        "module": "SautiLM-Lex",
+        "category": "glottal_initial",
+        "chrf_pp": 24.13,
+        "bleu": 6.36,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "'ábba"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "swahili_mjini",
+            "french_village_or_town"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 117,
+        "response_preview": "Le mot \"Bbadha 'ábba\" (a.json) en kiswahili et en français signifie **\"Je suis en colère\"** ou **\"Je suis frustré\"**.",
+        "latency_ms": 5744.5
+      },
+      {
+        "id": "BBADHA-LEX-004",
+        "module": "SautiLM-Lex",
+        "category": "glottal_initial",
+        "chrf_pp": 24.04,
+        "bleu": 4.34,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "'ádzá"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "swahili_nyumbani",
+            "french_maison"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 464,
+        "response_preview": "Le mot \"Bbadha 'ádzá\" (a.json) en kiswahili et en français signifie :\n\n* **Bbadha (a.json) :**  Un **\"Bbadha\" (a.json)**, souvent utilisé dans les contextes religieux ou de la culture local, est un **\"Bbadha\" (a.json)**, un **\"Bbadha\" (a.json)**, ou un **\"Bbadha\" (a.json)**, qui est un **\"Bbadha\" (a.json)**, un **\"Bbad",
+        "latency_ms": 37952.3
+      },
+      {
+        "id": "BBADHA-LEX-005",
+        "module": "SautiLM-Lex",
+        "category": "kinship_lexicon",
+        "chrf_pp": 30.06,
+        "bleu": 19.72,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "'àba"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "kinship_father_uncle",
+            "swahili_baba"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 67,
+        "response_preview": "Le mot \"Bbadha 'àba\" (a.json) signifie **\"àba\" (àba) en français**.",
+        "latency_ms": 2957.6
+      },
+      {
+        "id": "BBADHA-LEX-006",
+        "module": "SautiLM-Lex",
+        "category": "nature_lexicon",
+        "chrf_pp": 17.55,
+        "bleu": 7.98,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "forêt"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "forest_context"
+          ],
+          "failed_checks": [
+            "bbadha_ago"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 86,
+        "response_preview": "Selon l'anglais A.json, \"dans la forêt\" dit-on **\"M'a-t-elle été-je dans la forêt ?\"**",
+        "latency_ms": 3149.8
+      },
+      {
+        "id": "BBADHA-LEX-007",
+        "module": "SautiLM-Lex",
+        "category": "climate_lexicon",
+        "chrf_pp": 11.25,
+        "bleu": 2.59,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "heavy_rain_season"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 90,
+        "response_preview": "Dans le domaine du climat, le mot **Bbadha** (b.json) signifie **\"bâché\"** ou **\"bâché\"**.",
+        "latency_ms": 3523.8
+      },
+      {
+        "id": "BBADHA-LEX-008",
+        "module": "SautiLM-Lex",
+        "category": "health_lexicon",
+        "chrf_pp": 20.19,
+        "bleu": 1.82,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "bba"
+        ],
+        "semantic_accuracy": 33.33,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "dosage_precaution"
+          ],
+          "failed_checks": [
+            "medicinal_plant",
+            "cough_indication"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 647,
+        "response_preview": "En médecine traditionnelle, le mot **Bbadha** (b.json) désigne **un type de sang** ou **un type de sang** qui est **défibratoire** (par exemple, une sanglette, une poumons, une gorge, etc.) et **non-défibratoire** (par exemple, une poumons, une gorge, etc.)**.\n\n**Précaution concernant le dictionnaire :**\n\n* **Bbadha vs",
+        "latency_ms": 12459.3
+      },
+      {
+        "id": "BBADHA-LEX-009",
+        "module": "SautiLM-Lex",
+        "category": "polysemy_and_tones",
+        "chrf_pp": 16.64,
+        "bleu": 4.87,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "bbù"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "hole_well_sense",
+            "dowry_sense"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 219,
+        "response_preview": "Les deux sens du mot Bbadha \"bbù\" (b.json) en Kiswahili et en français sont :\n\n* **Bbadha (b.json)** : Le sens le plus courant et le plus courant.\n* **Bbadha (b.fr)** : Un terme plus familier et moins courant que \"bbù\".",
+        "latency_ms": 4945.7
+      },
+      {
+        "id": "BBADHA-LEX-010",
+        "module": "SautiLM-Lex",
+        "category": "family_lexicon",
+        "chrf_pp": 15.74,
+        "bleu": 2.09,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "wakú"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "baby_carrier_cradle",
+            "child_reference"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 660,
+        "response_preview": "Le mot \"Bbadha\" (wakú) en **JSON** signifie **\"Bâtit\"** ou **\"Développez\"** dans une expression de langage. Il est utilisé pour décrire une construction, un projet, une activité, ou une transformation.\n\nVoici quelques exemples de phrases utilisant \"Bbadha\" :\n\n* **Construction:** \"Le bâtiment est construit avec des maté",
+        "latency_ms": 13306.0
+      },
+      {
+        "id": "BBADHA-EDU-011",
+        "module": "SautiLM-Edu",
+        "category": "science_in_bbadha",
+        "chrf_pp": 24.01,
+        "bleu": 3.59,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "water_cycle",
+            "rain_cycle",
+            "forest_protection"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 667,
+        "response_preview": "Le cycle de l'eau et la protection des sols est un processus complexe qui implique plusieurs étapes clés. Voici une explication détaillée :\n\n**Cycle d'Eau :**\n\n* **Définition :** L'eau est un élément fondamental de la vie et de la structure de la Terre. Elle est essentielle pour la respiration, la reproduction, la croi",
+        "latency_ms": 11676.2
+      },
+      {
+        "id": "BBADHA-MED-012",
+        "module": "SautiLM-Med",
+        "category": "health_in_bbadha",
+        "chrf_pp": 22.2,
+        "bleu": 3.83,
+        "keyword_accuracy": 100.0,
+        "matched_keywords": [
+          "ddà",
+          "bbù",
+          "SRO"
+        ],
+        "semantic_accuracy": 33.33,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "boil_or_purify_water"
+          ],
+          "failed_checks": [
+            "ors_one_liter",
+            "hygiene_storage"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 674,
+        "response_preview": "Voici les 3 étapes pour purifier l'eau (ddà) issue d'un puits (bbù) et préparer le SRO (Sulfate-Dispersed Oil Reduction) :\n\n1.  **Nettoyage et Préparation du SRO :**\n\n    *   **Nettoyage :**  Le SRO est un produit chimique qui est souvent utilisé pour nettoyer les eaux usées. Il est généralement nettoyé avec un agent d",
+        "latency_ms": 13460.7
+      },
+      {
+        "id": "BBADHA-MATH-013",
+        "module": "SautiLM-Math",
+        "category": "contextual_math",
+        "chrf_pp": 37.45,
+        "bleu": 9.32,
+        "keyword_accuracy": 50.0,
+        "matched_keywords": [
+          "'ábba"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "intermediate_parts",
+            "exact_capital"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 202,
+        "response_preview": "Dans une coopérative au village ('ábba), 20 membres souscrivent 3 parts à 2000 FC chacune.\n\nLe nombre de parts souscrites est de 2000 / 3 = 666.67.\n\nLe capital total est 2000 FC * 666.67 = 133333.33 FC.",
+        "latency_ms": 5901.6
+      },
+      {
+        "id": "BBADHA-IUS-014",
+        "module": "SautiLM-Ius",
+        "category": "legal_linguistic_rights",
+        "chrf_pp": 31.89,
+        "bleu": 17.21,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "18"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "language_understood",
+            "custody_48_hours"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 304,
+        "response_preview": "L'article 18 de la Constitution de la RDC stipule que **l'arrêt de la résidence est considéré comme une violation de la loi et constitue une infraction grave**.\n\nEn résumé, l'article 18 prévoit que **l'arrêt de la résidence est considéré comme une violation de la loi et constitue une infraction grave**.",
+        "latency_ms": 5140.0
+      },
+      {
+        "id": "BBADHA-VOICE-015",
+        "module": "SautiLM-Voice",
+        "category": "phonetics_and_tones",
+        "chrf_pp": 20.54,
+        "bleu": 2.35,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "Bbadha"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "ituri_drc_origin",
+            "tonal_and_implosive"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 452,
+        "response_preview": "Les caractéristiques phonétiques majeures de la langue Bbadha (Kilendu) sont :\n\n* **Répétition de \"b\" (b-b):** La partie \"b\" est la plus importante et la plus fréquente. Elle est prononcée en **\"b\"** (b-b) ou **\"b\"** (b-b).\n* **Répétition de \"d\" (d-d):** La partie \"d\" est prononcée en **\"d\"** (d-d) ou **\"d\"** (d-d).\n* ",
+        "latency_ms": 15452.6
+      }
+    ]
+  },
+  "hybrid_cpu": {
+    "model_name": "SautiLM Jua (283.48 MB INT8, CPU, Hybrid RAG+Solver)",
+    "language": "Bbadha (Kilendu - ISO 639-3: led)",
+    "benchmark_version": "bbadha_eval_v1",
+    "num_samples": 15,
+    "metrics": {
+      "mean_chrf_pp": 23.05,
+      "mean_bleu": 9.43,
+      "mean_keyword_accuracy": 38.33,
+      "mean_semantic_accuracy": 15.56,
+      "mean_latency_ms": 6460.9,
+      "total_eval_seconds": 96.91
+    },
+    "results": [
+      {
+        "id": "BBADHA-LEX-001",
+        "module": "SautiLM-Lex",
+        "category": "polysemy_and_tones",
+        "chrf_pp": 25.62,
+        "bleu": 13.62,
+        "keyword_accuracy": 75.0,
+        "matched_keywords": [
+          "ddà",
+          "eau",
+          "rivière"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "water_river_sense"
+          ],
+          "failed_checks": [
+            "long_far_or_example"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 223,
+        "response_preview": "Le mot \"Bbadha\" (ddà) en Kiswahili signifie **\"l'eau, la rivière\"** ou **\"l'eau, la rivière\"**. Il est utilisé dans des contextes plus spécifiques, comme dans la grammaire de la langue, ou dans des expressions idiomatiques.",
+        "latency_ms": 7878.0
+      },
+      {
+        "id": "BBADHA-LEX-002",
+        "module": "SautiLM-Lex",
+        "category": "tonal_minimal_pair",
+        "chrf_pp": 12.11,
+        "bleu": 5.74,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "dà",
+          "ddà"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "da_meaning",
+            "dda_meaning"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 123,
+        "response_preview": "La différence entre \"dà\" et \"ddà\" en Bbadha est :\n\n* **\"Dà\"** :  **\"Dà\"** (en Bbadha)\n* **\"Dddà\"** : **\"Dddà\"** (en Bbadha)",
+        "latency_ms": 5482.2
+      },
+      {
+        "id": "BBADHA-LEX-003",
+        "module": "SautiLM-Lex",
+        "category": "glottal_initial",
+        "chrf_pp": 15.39,
+        "bleu": 2.06,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "swahili_mjini",
+            "french_village_or_town"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 77,
+        "response_preview": "En français, le mot \"Bbadha\" signifie **\"à la maison\"** ou **\"à la maison\"**.",
+        "latency_ms": 2345.7
+      },
+      {
+        "id": "BBADHA-LEX-004",
+        "module": "SautiLM-Lex",
+        "category": "glottal_initial",
+        "chrf_pp": 49.25,
+        "bleu": 30.34,
+        "keyword_accuracy": 66.67,
+        "matched_keywords": [
+          "'ádzá",
+          "maison"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "french_maison"
+          ],
+          "failed_checks": [
+            "swahili_nyumbani"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 141,
+        "response_preview": "En kiswahili, le mot Bbadha \"'ádzá\" signifie :\n\n*   **Kiswahili:** 'à la maison'\n*   **Français:** 'sortez vite de la maison pour travailler'",
+        "latency_ms": 4052.3
+      },
+      {
+        "id": "BBADHA-LEX-005",
+        "module": "SautiLM-Lex",
+        "category": "kinship_lexicon",
+        "chrf_pp": 25.69,
+        "bleu": 13.34,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "père"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "kinship_father_uncle"
+          ],
+          "failed_checks": [
+            "swahili_baba"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 57,
+        "response_preview": "Le mot \"Bbadha\" (a.json) signifie \"mon père\" en kisanini.",
+        "latency_ms": 2536.0
+      },
+      {
+        "id": "BBADHA-LEX-006",
+        "module": "SautiLM-Lex",
+        "category": "nature_lexicon",
+        "chrf_pp": 27.34,
+        "bleu": 17.5,
+        "keyword_accuracy": 66.67,
+        "matched_keywords": [
+          "mwituni",
+          "forêt"
+        ],
+        "semantic_accuracy": 50.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "forest_context"
+          ],
+          "failed_checks": [
+            "bbadha_ago"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 118,
+        "response_preview": "Selon la grammaire de la définition de \"dans la forêt\" (mwituni) en Bbadha, on dit \"à la forêt\" (mwituni) en français.",
+        "latency_ms": 3808.5
+      },
+      {
+        "id": "BBADHA-LEX-007",
+        "module": "SautiLM-Lex",
+        "category": "climate_lexicon",
+        "chrf_pp": 24.14,
+        "bleu": 10.02,
+        "keyword_accuracy": 33.33,
+        "matched_keywords": [
+          "bbě"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "heavy_rain_season"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 186,
+        "response_preview": "Dans le domaine du climat, le mot Bbadha \"bbě\" (b.json) signifie :\n\n* **Bbadha (b.json):**  Le **temps** de la **période** de **l'été** (en Afrique).\n* **bbě:**  **Bbadha** (en Afrique).",
+        "latency_ms": 5678.2
+      },
+      {
+        "id": "BBADHA-LEX-008",
+        "module": "SautiLM-Lex",
+        "category": "health_lexicon",
+        "chrf_pp": 14.84,
+        "bleu": 3.95,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "bba"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "medicinal_plant",
+            "cough_indication",
+            "dosage_precaution"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 101,
+        "response_preview": "En médecine traditionnelle et en biopharmaceutique, le mot \"bbadha\" (bba) désigne **\"bba\" (b.json)**.",
+        "latency_ms": 3658.7
+      },
+      {
+        "id": "BBADHA-LEX-009",
+        "module": "SautiLM-Lex",
+        "category": "polysemy_and_tones",
+        "chrf_pp": 10.17,
+        "bleu": 3.76,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "bbù"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "hole_well_sense",
+            "dowry_sense"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 127,
+        "response_preview": "Les deux sens du mot \"bbù\" en Kiswahili et en français sont :\n\n* **Kiswahili:** \"bbù\" (b.json)\n* **Français:** \"boite\" (b.json)",
+        "latency_ms": 4324.8
+      },
+      {
+        "id": "BBADHA-LEX-010",
+        "module": "SautiLM-Lex",
+        "category": "family_lexicon",
+        "chrf_pp": 25.29,
+        "bleu": 11.97,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "wakú"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "baby_carrier_cradle",
+            "child_reference"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 126,
+        "response_preview": "Le mot Bbadha \"wakú\" (w.json) signifie :\n\n* **\"wakú\"** : **\"w.json\"** (en français)\n* **\"bbadha\"** : **\"w.json\"** (en anglais)",
+        "latency_ms": 3925.9
+      },
+      {
+        "id": "BBADHA-EDU-011",
+        "module": "SautiLM-Edu",
+        "category": "science_in_bbadha",
+        "chrf_pp": 24.72,
+        "bleu": 4.08,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "water_cycle",
+            "rain_cycle",
+            "forest_protection"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 641,
+        "response_preview": "Absolument ! Voici une explication du cycle de l'eau et de la protection des sols en intégrant les termes Bbadha réels :\n\n**Cycle de l'Eau**\n\nLe cycle de l'eau est un cycle continu qui se répète à travers l'environnement :\n\n1.  **Désintégration :**\n    *   **Bbadha réels :** L'eau est déminulé (déminulé) à travers les ",
+        "latency_ms": 12972.6
+      },
+      {
+        "id": "BBADHA-MED-012",
+        "module": "SautiLM-Med",
+        "category": "health_in_bbadha",
+        "chrf_pp": 22.08,
+        "bleu": 4.53,
+        "keyword_accuracy": 100.0,
+        "matched_keywords": [
+          "ddà",
+          "bbù",
+          "SRO"
+        ],
+        "semantic_accuracy": 33.33,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [
+            "boil_or_purify_water"
+          ],
+          "failed_checks": [
+            "ors_one_liter",
+            "hygiene_storage"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 624,
+        "response_preview": "Voici les 3 étapes pour purifier l'eau d'un puits (bbù) et préparer le SRO (SautiLM-Med) :\n\n1. **Purification de l'eau (ddà):**\n   * **Désinfection:**  Utiliser un désinfectant (comme un désinfectant de rivière, un désinfectant de puits, ou un désinfectant de rivière) pour éliminer les bactéries et les virus.\n   * **Re",
+        "latency_ms": 12881.5
+      },
+      {
+        "id": "BBADHA-MATH-013",
+        "module": "SautiLM-Math",
+        "category": "contextual_math",
+        "chrf_pp": 19.11,
+        "bleu": 7.85,
+        "keyword_accuracy": 0.0,
+        "matched_keywords": [],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "intermediate_parts",
+            "exact_capital"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 52,
+        "response_preview": "Voici la réponse :\n\nLe capital total est de 2000 FC.",
+        "latency_ms": 2338.9
+      },
+      {
+        "id": "BBADHA-IUS-014",
+        "module": "SautiLM-Ius",
+        "category": "legal_linguistic_rights",
+        "chrf_pp": 34.7,
+        "bleu": 10.29,
+        "keyword_accuracy": 66.67,
+        "matched_keywords": [
+          "18",
+          "Bbadha"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "language_understood",
+            "custody_48_hours"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 669,
+        "response_preview": "D'après la définition de \"mot\" de la grammaire BBADHA VERIFIE, l'article 18 de la Constitution de la RDC stipule :\n\n*   **L'article 18 de la Constitution de la RDC stipule :**\n    *   **L'article 18 de la Constitution de la RDC** stipule : \"L'information d'une personne arrêtée (locuteur Bbadha) et la durée de garde à v",
+        "latency_ms": 12695.3
+      },
+      {
+        "id": "BBADHA-VOICE-015",
+        "module": "SautiLM-Voice",
+        "category": "phonetics_and_tones",
+        "chrf_pp": 15.29,
+        "bleu": 2.43,
+        "keyword_accuracy": 25.0,
+        "matched_keywords": [
+          "Bbadha"
+        ],
+        "semantic_accuracy": 0.0,
+        "semantic_details": {
+          "semantic_pass": false,
+          "passed_checks": [],
+          "failed_checks": [
+            "ituri_drc_origin",
+            "tonal_and_implosive"
+          ],
+          "forbidden_hits": []
+        },
+        "response_chars": 547,
+        "response_preview": "Les caractéristiques phonétiques majeures de la langue Bbadha (Kilendu) sont :\n\n* **Rondeaux:** La langue Bbadha a des fréquences de rondes (rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, rondes, ron",
+        "latency_ms": 12334.4
+      }
+    ]
+  }
+}
